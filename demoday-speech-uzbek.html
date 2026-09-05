@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UzThermo Demo Day nutqi</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #607080;
+      --accent: #e85d2a;
+      --accent-dark: #a83b18;
+      --paper: #fffdf9;
+      --line: #eadfd2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eee9e1;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.72;
+    }
+    .toolbar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      font-family: Arial, sans-serif;
+    }
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .toolbar button.secondary { background: #344454; }
+    article {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto 40px;
+      padding: 64px 76px;
+      background: var(--paper);
+      box-shadow: 0 16px 50px rgba(40, 30, 20, .12);
+    }
+    .eyebrow {
+      color: var(--accent-dark);
+      font: 700 12px/1.2 Arial, sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 14px 0 8px;
+      font: 700 clamp(34px, 6vw, 56px)/1.05 Georgia, serif;
+      letter-spacing: -.02em;
+    }
+    .subtitle {
+      margin: 0 0 36px;
+      color: var(--muted);
+      font: 16px/1.5 Arial, sans-serif;
+    }
+    .rule { height: 3px; width: 72px; background: var(--accent); margin: 0 0 32px; }
+    p { margin: 0 0 18px; font-size: 18px; }
+    strong { color: var(--accent-dark); }
+    .pause {
+      margin: 28px 0;
+      padding: 16px 20px;
+      border-left: 4px solid var(--accent);
+      background: #fff3e9;
+      color: #49362b;
+      font-style: italic;
+    }
+    .features {
+      margin: 22px 0 24px;
+      padding: 0;
+      list-style: none;
+      font-size: 17px;
+    }
+    .features li {
+      margin: 10px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+    .features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .closing {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-note {
+      margin-top: 30px;
+      color: var(--muted);
+      font: 12px/1.5 Arial, sans-serif;
+    }
+    @media (max-width: 650px) {
+      article { padding: 38px 24px; }
+      p { font-size: 17px; }
+    }
+    @media print {
+      @page { size: A4; margin: 15mm; }
+      body { background: white; }
+      .toolbar { display: none; }
+      article {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      p { font-size: 15.5px; line-height: 1.55; }
+      .features { font-size: 15px; }
+      h1 { font-size: 38px; }
+      .pause { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">PDF sifatida saqlash / Chop etish</button>
+    <button class="secondary" onclick="document.body.classList.toggle('focus')">Taqdimot rejimi</button>
+  </div>
+
+  <article>
+    <div class="eyebrow">Demo Day • UzThermo</div>
+    <h1>UzThermo — isitish va santexnika uchun aqlli marketplace</h1>
+    <p class="subtitle">3–4 daqiqalik taqdimot nutqi</p>
+    <div class="rule"></div>
+
+    <p>Assalomu alaykum, hurmatli mehmonlar va hamkasblar.</p>
+
+    <p>Bugun men sizlarga <strong>UzThermo</strong> loyihasini taqdim qilaman. UzThermo — qozonlar, gaz isitkichlar, quvurlar, fitinglar, nasoslar va radiatorlarni topish, tanlash, solishtirish va buyurtma qilishni bitta platformaga birlashtirgan zamonaviy onlayn do‘kon.</p>
+
+    <p>Bizning asosiy maqsadimiz oddiy: mijozga kerakli mahsulotni tezroq topishga, texnik jihatdan to‘g‘ri tanlashga va xaridni qulay yakunlashga yordam berish. Chunki isitish yoki santexnika mahsulotini tanlashda faqat narxning o‘zi yetarli emas. Uning quvvati, o‘lchami, bosimi, materiali va boshqa texnik ko‘rsatkichlari ham muhim.</p>
+
+    <div class="pause">Endi loyihaning asosiy imkoniyatlarini qisqacha ko‘rsatib o‘taman.</div>
+
+    <p>Birinchi imkoniyat — <strong>mahsulot katalogi</strong>. Foydalanuvchi mahsulotlarni kategoriya, brend, narx, diametr, quvvat va mavjudlik bo‘yicha filterlashi mumkin. Qidiruv va grid yoki jadval ko‘rinishi esa katta katalog bilan ishlashni ancha osonlashtiradi.</p>
+
+    <p>Ikkinchi muhim funksiya — <strong>mahsulotlarni solishtirish</strong>. Har bir mahsulotning texnik xususiyatlari alohida saqlanadi va solishtirish jadvali avtomatik shakllanadi. Masalan, administrator quyidagi ma’lumotlarni qo‘shishi mumkin:</p>
+
+    <ul class="features">
+      <li>Hajm — 100 litr</li>
+      <li>Issiqlik almashinuvi — 1</li>
+      <li>Balandlik — 850 millimetr</li>
+      <li>Og‘irlik — 45 kilogramm</li>
+      <li>Diametr — 460 millimetr</li>
+      <li>Maksimal bosim — 10 bar</li>
+      <li>Maksimal harorat — 85 daraja</li>
+      <li>Qoplama — emal</li>
+    </ul>
+
+    <p>Bu xususiyatlar oldindan kodga qattiq yozib qo‘yilmagan. Administrator mahsulot yaratish yoki tahrirlash vaqtida istalgan nom va qiymatni qo‘shishi, o‘zgartirishi yoki o‘chirishi mumkin. Agar bir mahsulotda “Kafolat”, boshqasida esa “Material” bo‘lsa, solishtirish jadvali ikkala mahsulotdagi barcha noyob xususiyatlarni birlashtiradi. Yetishmayotgan qiymat esa aniq ko‘rinishi uchun chiziqcha bilan belgilanadi.</p>
+
+    <p>Uchinchi imkoniyat — <strong>qozon quvvatini hisoblash kalkulyatori</strong>. Foydalanuvchi xona maydoni, shift balandligi, izolyatsiya darajasi va tashqi devorlar sonini kiritadi. Tizim kerakli kilovatt diapazonini va tavsiya etiladigan quvur diametrini hisoblab, mos mahsulotlarni katalogdan topishga yo‘naltiradi.</p>
+
+    <p>To‘rtinchi funksiya — <strong>fiting tanlash yordamchisi</strong>. Foydalanuvchi quvur materiali va diametrini tanlaydi. Tizim mos fitinglarni, SKU kodlarini va narxlarni ko‘rsatadi. Bu noto‘g‘ri detal tanlash xavfini kamaytiradi.</p>
+
+    <p>Platformada yana <strong>installerlar bo‘limi</strong> ham mavjud. Mijoz tasdiqlangan HVAC mutaxassislari va santexniklarni, ularning reytingi, bajarilgan loyihalari va xizmat hududlari bo‘yicha ko‘rishi mumkin.</p>
+
+    <p>Administrator paneli esa butun biznesni boshqarish uchun xizmat qiladi. Admin mahsulotlar, kategoriyalar, rasmlar, dinamik texnik xususiyatlar, buyurtmalar va installerlar bilan ishlaydi. Buyurtmalar holatini kuzatish, ombordagi qoldiqni nazorat qilish va Telegram orqali yangi buyurtma bildirishnomalarini olish ham shu tizimga ulangan.</p>
+
+    <p>Texnik tomondan loyiha frontendda <strong>Next.js, React, Tailwind CSS va Zustand</strong> texnologiyalaridan foydalanadi. Backend qismi <strong>Node.js va Express</strong> asosida qurilgan, ma’lumotlar esa <strong>MongoDB</strong>da saqlanadi. JWT autentifikatsiyasi administrator va foydalanuvchi ma’lumotlarini himoyalashga yordam beradi.</p>
+
+    <div class="closing">
+      <p>Xulosa qilib aytganda, UzThermo oddiy internet-do‘kon emas. Bu mahsulot tanlashni texnik jihatdan tushunarli qiladigan, xaridor va administrator uchun qulay bo‘lgan to‘liq ekotizimdir.</p>
+      <p>Bizning keyingi yo‘nalishimiz — mahsulotlar bazasini kengaytirish, hisob-kitob vositalarini boyitish va buyurtma jarayonini yanada avtomatlashtirish.</p>
+      <p><strong>E’tiboringiz uchun rahmat. Savollaringiz bo‘lsa, mamnuniyat bilan javob beraman.</strong></p>
+    </div>
+
+    <div class="footer-note">PDF olish uchun yuqoridagi tugmani bosing yoki brauzerda Ctrl+P → “Save as PDF” ni tanlang.</div>
+  </article>
+</body>
+</html>
